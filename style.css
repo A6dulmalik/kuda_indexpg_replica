@@ -1,0 +1,868 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+:root {
+    --purple: #40196D;
+    font-family: "Mulish", sans-serif;
+}
+
+/* NAVBAR STYLING */
+nav {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 23.3rem;
+    align-items: center;
+    padding: 10px;
+    box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.1);
+    /* position: fixed; */
+    background: white;
+    /* z-index: 10; */
+}
+
+.logoandlinksDiv {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6rem;
+    align-items: center;
+    padding-left: 4rem;
+}
+
+.navlinks {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3.75rem;
+    align-items: center;
+    color: var(--purple);
+    font-size: 14px;
+    /* font-weight: 600; */
+    color: rgb(85, 31, 146);
+}
+
+.signInDiv {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    align-items: center;
+    /* font-weight: 700; */
+    color: rgb(85, 31, 146);
+}
+
+.signInDiv p {
+    font-size: 14px;
+}
+
+.signInDiv button {
+    background: rgb(64, 25, 109);
+    color: white;
+    font-size: 14px;
+    font-weight: 700;
+    padding: 13px 36px;
+    border: none;
+    border-radius: 10px;
+}
+
+/* Uniform styling (padding) for eight sections  */
+.parentDiv {
+    padding: 60px 100px;
+}
+
+/* Intro/firstsection Styling */
+.childDiv {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.childDiv h1,
+.childDiv h2 {
+    font-weight: 900;
+    color: var(--purple);
+}
+
+.childDiv h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.childDiv p {
+    font-size: 15px;
+    font-weight: 600;
+    color: rgb(80, 79, 79);
+    /* margin-bottom: 30px; */
+}
+
+
+/* FIRST DIV STYLING */
+.childDiv1 {
+    justify-content: space-around;
+}
+
+.leftDiv1 {
+    width: 38%;
+    margin-top: 120px;
+}
+
+.leftDiv h1 {
+    font-size: 42px;
+    margin-bottom: 20px;
+}
+
+.leftDiv1 p {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 26px;
+    margin-bottom: 30px;
+}
+
+.leftDiv1 .imageDiv {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-bottom: 20px;
+}
+
+.ndicandcbn {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    align-items: center;
+    /* justify-content: baseline; */
+}
+
+.cbn,
+.ndic {
+    display: flex;
+}
+
+.cbn p,
+.ndic p {
+    font-size: 11px !important;
+    color: #a8a7a7;
+    margin-right: 6px;
+}
+
+.cbn img {
+    width: 17px;
+    height: 19px;
+}
+
+.ndic img {
+    margin-top: 5px;
+    width: 38px;
+    height: 16px;
+}
+
+.cbn,
+.ndic {
+    display: flex;
+}
+
+
+/* SECOND DIV STYLING */
+.childDiv2 {
+    margin-top: 50px;
+    margin-bottom: 10rem;
+}
+
+.topcards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    font-weight: 700;
+    color: var(--purple);
+    margin-bottom: 30px;
+}
+
+.topcards .card {
+    width: 28%;
+    padding: 20px;
+    box-shadow: 3px 3px 10px rgb(236, 235, 235);
+    border-radius: 5px;
+}
+
+.card i,
+.card img {
+    background: lightblue;
+    border-radius: 50%;
+    margin: 1rem 0;
+}
+
+.bottomcards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    font-weight: 700;
+    color: var(--purple);
+}
+
+.bottomcards .card {
+    width: 40%;
+    padding: 20px;
+    box-shadow: 2px 2px 2px 1px lightgray;
+    border-radius: 5px;
+}
+
+
+/* THIRD DIV STYLING */
+.childDiv3 {
+    flex-wrap: wrap;
+    gap: 10rem;
+    margin-bottom: 17rem;
+}
+
+.leftDiv3 {
+    width: 33%;
+}
+
+.leftDiv3 h2 {
+    font-size: 30px;
+    line-height: 44px;
+}
+
+.leftDiv3 p {
+    width: 100%;
+    line-height: 20px;
+    margin: 20px 0;
+}
+
+.leftDiv3 a {
+    text-decoration: underline;
+    color: rgb(122, 15, 122);
+    font-weight: 700;
+}
+
+.fa-angle-right {
+    margin-left: 3px;
+}
+
+
+/* FOURTH DIV STYLING */
+.childDiv4 {
+    gap: 13rem;
+}
+
+.leftDiv4 {
+    /* display: flex; */
+    height: 360px;
+    width: 370px;
+    border-radius: 50%;
+    background: rgb(215, 242, 250);
+    gap: 1rem;
+    position: relative;
+}
+
+.slipchild {
+    width: 120rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    box-shadow: 2px 3px 4px rgb(236, 235, 235);
+    border-radius: 2px;
+    padding: 8px;
+    margin: 10px 0;
+    background: white;
+    width: 100%;
+}
+
+.slipdiv1,
+.slipdiv2 {
+    position: absolute;
+    width: 65%;
+}
+
+.slipdiv1 {
+    margin-top: 20px;
+    left: -17%;
+}
+
+.slipdiv2 {
+    margin-top: 50px;
+    right: -17%;
+}
+
+.slipchild p {
+    font-size: 10px;
+    font-weight: 900;
+    color: var(--purple);
+    line-height: 20px;
+    border-bottom: 4px solid rgb(236, 235, 235);
+    width: 100%;
+}
+
+.slipdiv1 .slipchild .icon1 {
+    font-size: 12px;
+}
+
+/* .slipchild .fa-angle-right{
+    float: right;
+} */
+.slipdiv2 .slipchild {
+    height: 50px;
+}
+
+.rightDiv4 {
+    width: 400px;
+}
+
+.rightDiv4 p {
+    line-height: 20px;
+    width: 97%;
+}
+
+
+/* FIFTH DIV STYLING */
+.childDiv5 {
+    gap: 10rem;
+    margin-top: 220px;
+}
+
+.leftDiv5 {
+    width: 420px;
+}
+
+.leftDiv5 p {
+    line-height: 30px;
+    width: 92%;
+    margin-bottom: 30px;
+}
+
+.leftDiv5 a {
+    align-items: center;
+    font-size: 15px;
+    font-weight: 800;
+    text-decoration: underline;
+    color: rgb(85, 8, 85);
+}
+
+.rightDiv5 {
+    height: 29rem;
+    width: 30rem;
+    /* box-shadow: ; */
+
+    img {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+
+/*  SIXTH DIV STYLING */
+.childDiv6 {
+    margin-top: 180px;
+    gap: 7rem;
+}
+
+.rightDiv6 {
+    width: 382px;
+}
+
+.rightDiv6 p {
+    margin-bottom: 30px !important;
+}
+
+.rightDiv6 a {
+    font-size: 15px;
+    font-weight: 800;
+    text-decoration: underline;
+    color: rgb(85, 8, 85);
+}
+
+
+/* SEVENTH DIV STYLING */
+.childDiv7 {
+    margin-top: 100px;
+    gap: 10rem;
+}
+
+.rightDiv7 {
+    width: 380px;
+}
+
+.rightDiv7 p {
+    margin-bottom: 30px !important;
+}
+
+.rightDiv7 a {
+    font-size: 15px;
+    font-weight: 800;
+    text-decoration: underline;
+    color: rgb(85, 8, 85);
+}
+
+
+/* EIGHTH DIV STYLING */
+.childDiv8 {
+    gap: 12rem;
+    margin-top: 120px;
+}
+
+.rightDiv8 {
+    width: 500px;
+    height: 490px;
+}
+
+.rightDiv8 img {
+    width: 100%;
+    height: 100%;
+}
+
+.leftDiv8 {
+    width: 370px;
+}
+
+.leftDiv8 p {
+    margin-bottom: 30px;
+}
+
+.leftDiv8 a {
+    font-size: 15px;
+    font-weight: 800;
+    text-decoration: underline;
+    color: rgb(85, 8, 85);
+}
+
+
+/* TESTIMONY DIV STYLING */
+.testimoniesDiv {
+    /* padding: 50px; */
+    margin-top: 150px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.testimoniesContainer {
+    display: flex;
+    width: max-content;
+
+}
+
+.testimoniesDiv h2 {
+    font-size: 32px;
+    font-weight: 900;
+    color: var(--purple);
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.testimony {
+    width: 386px;
+    margin: 20px;
+    /* font-size: 14px; */
+    padding: 18px;
+    border-radius: 5px;
+    box-shadow: 4px 4px 5px rgb(180, 178, 178);
+    /* border: 1px solid; */
+    overflow-y: auto;
+    transform: translateX(100%);
+    animation: scroll-left 20s linear infinite;
+}
+
+@keyframes scroll-left {
+    100% {
+        transform: translateX(100%);
+    }
+
+    0% {
+        transform: translateX(-100%);
+    }
+}
+
+.testimony p {
+    padding-bottom: 40px;
+}
+
+.imageDiv {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+}
+
+.imageDiv img {
+    /* border-radius: 50%; */
+}
+
+.imageDiv label {
+    font-size: 12px;
+    font-weight: 900;
+}
+
+
+/* LOGOS SECTION  */
+.logosDiv {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    margin: 80px 0;
+}
+
+
+/* PARTNERS DIV STYLING */
+.partnersDiv {
+    height: 300px;
+    /* background: rgb(250, 249, 249); */
+    background: #FBFBFB;
+    padding: 50px;
+}
+
+.partnersDiv h2 {
+    font-size: 32px;
+    font-weight: 900;
+    color: var(--purple);
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.partnerslogoDiv {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/* CHOOSE TABLE DIV */
+.chooseDiv h2{
+    font-size: 32px;
+    font-weight: 900;
+    color: var(--purple);
+    text-align: center;
+    margin-bottom: 50px;
+}
+.chooseDiv table{
+    width: 75%;
+    margin: auto;
+    border: 1px solid rgb(236, 236, 236);
+    border-radius: 10px;
+    border-collapse: collapse;
+    box-shadow: 3px 3px 10px rgb(226, 226, 226);
+}
+thead th{
+    border-bottom: 1px solid rgb(236, 236, 236);
+    padding: 2.5rem 0rem 1rem 2rem ;
+    text-align: left;
+}
+tbody td{
+    border-bottom: 1px solid rgb(236, 236, 236);
+    padding: 1rem 0rem 1rem 2rem;
+}
+tbody .data1{
+    font-weight: 700;
+}
+.lastrow{
+    padding: 10rem 0rem 30rem 2rem;
+}
+
+/* MORE OF YOU DIV */
+.moreofyou{
+    margin-top: 100px;
+}
+.boxes{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px;
+    justify-content: center;
+    align-items: center;
+}
+.box{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 2rem;
+    width: 25%;
+    padding: 20px;
+    box-shadow: 3px 3px 10px rgb(226, 226, 226);
+}
+.box h3{
+    font-size: 28px;
+    font-weight: 900;
+    color: var(--purple);
+}
+.box a{
+    color: purple;
+    text-decoration: underline;
+}
+
+
+/* THE MONEY APP FOR AFRICANS DIV (BOTTOM) */
+.moneyappDiv{
+    width: 80%;
+    height: 300px;
+    margin: auto;
+    display: flex;
+    border: 1px solid;
+    border-radius: 10px;
+    background: rgb(243, 247, 248);
+    box-shadow: 8px 8px 20px rgb(187, 182, 182);
+    margin-top: 150px;
+}
+.moneyappDiv .rightDiv{
+    height: 100%;
+    display: flex;
+    align-items: last baseline;
+
+    img{
+        height: 100%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* RESPONSIVENESS */
+
+/* Mobile Screen */
+@media screen and (max-width: 767px) {
+    body {
+        width: 100%;
+    }
+
+    nav {
+        gap: 0px;
+
+    }
+
+    .logoandlinksDiv,
+    .navlinks,
+    .signInDiv {
+        gap: 0;
+        /* display: none; */
+    }
+
+    .parentDiv {
+        padding: 0px 0px;
+    }
+
+    .childDiv {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* .leftDiv{
+        width: 100%;
+        text-align: center;
+    }
+    .rightDiv{
+        width: 100%;
+        text-align: center;
+    } */
+
+    /* FIRST DIV STYLING */
+    .childDiv1 {
+        justify-content: center;
+        text-align: center;
+    }
+
+    .leftDiv1 {
+        width: 100%;
+    }
+
+    .leftDiv1 .imageDiv {
+        justify-content: center;
+    }
+
+    .ndicandcbn {
+        justify-content: center;
+    }
+
+    .rightDiv1 img {
+        width: 100%;
+    }
+
+
+    /* SECOND DIV STYLING */
+    .topcards,
+    .bottomcards {
+        flex-direction: column;
+    }
+
+    .topcards .card,
+    .bottomcards .card {
+        width: 100%;
+        font-weight: 900;
+    }
+
+    .card i,
+    .card img {
+        margin: 0;
+    }
+
+    /* THIRD DIV STYLING */
+    .childDiv3 {
+        gap: 2rem;
+        margin-bottom: 6rem;
+    }
+
+    .leftDiv3 {
+        width: 100%;
+        text-align: center;
+    }
+
+    .leftDiv3 h2 {
+        width: 60%;
+        margin: auto;
+    }
+
+    .leftDiv3 p {
+        margin: 0 0;
+    }
+
+    .rightDiv3 {
+        width: 100%;
+    }
+
+    .rightDiv3 img {
+        width: 100%;
+    }
+
+    /* FOURTH DIV STYLING */
+    .childDiv4 {
+        flex-direction: column-reverse;
+        gap: 5rem;
+    }
+
+    .leftDiv4 {
+        width: 300px;
+        height: 300px;
+    }
+
+    .slipdiv1,
+    .slipdiv2 {
+        width: 59%;
+    }
+
+    .slipdiv1 .slipchild {
+        height: 30px;
+    }
+
+    .slipdiv2 .slipchild {
+        height: 34px;
+    }
+
+    .slipdiv1 {
+        left: -10%;
+    }
+
+    .slipdiv2 {
+        margin-top: 40px;
+        right: -10%;
+    }
+
+    .slipchild p {
+        font-size: 8px;
+    }
+
+    .rightDiv4 {
+        text-align: center;
+        width: 100%;
+    }
+
+    /* FIFTH DIV STYLING */
+    .childDiv5 {
+        margin-top: 150px;
+        gap: 5rem;
+    }
+
+    .leftDiv5 {
+        width: 100%;
+        text-align: center;
+    }
+
+    .rightDiv5 {
+        width: 100%;
+    }
+
+
+    /*  SIXTH DIV STYLING */
+    .childDiv6 {
+        /* margin-top: 100px; */
+        flex-direction: column-reverse;
+        gap: 3rem;
+    }
+    .leftDiv6{
+        width: 100%;
+    }
+    .rightDiv6{
+        width: 100%;
+        text-align: center;
+    }
+
+
+    /* SEVENTH DIV STYLING */
+    .childDiv7 {
+        gap: 5rem;
+        width: 100%;
+        text-align: center;
+    }
+
+
+    /* EIGHTH DIV STYLING */
+    .childDiv8{
+        flex-direction: column-reverse;
+        gap: 5rem;
+        width: 100%;
+        text-align: center;
+    }
+    .rightDiv8{
+        width: 100%;
+    }
+
+
+    /* TESTIMONY DIV STYLING */
+    .testimoniesDiv {
+        margin-top: 150px;
+        text-align: center;
+    }
+    .testimoniesDiv h2{
+        width: 80%;
+        margin: auto;
+    }
+
+
+    /* LOGOS SECTION  */
+    .logo{
+        width: 30%;
+    }
+
+
+    /* PARTNERS DIV STYLING */
+    .partnersDiv{
+        margin-bottom: 100px;
+
+    }
+    .partnerslogoDiv{
+        width: 100%;
+    }
+
+    /* CHOOSE TABLE DIV */
+    .chooseDiv table{
+        width: 100%;
+    }
+}
