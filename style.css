@@ -338,9 +338,6 @@ nav {
     font-size: 12px;
 }
 
-/* .slipchild .fa-angle-right{
-    float: right;
-} */
 .slipdiv2 .slipchild {
     height: 50px;
 }
@@ -651,12 +648,17 @@ tbody .data1 {
     background: rgb(243, 247, 248);
     box-shadow: 8px 8px 20px rgb(187, 182, 182);
     margin-top: 150px;
+    position: relative;
+    z-index: 20;
 }
 
 .moneyappDiv .rightDiv {
     height: 100%;
     display: flex;
     align-items: last baseline;
+    position: absolute;
+    z-index: 5;
+    bottom: -50%;
 
     img {
         height: 100%;
@@ -876,26 +878,28 @@ tbody .data1 {
     }
 
     /* LOGOS SECTION  */
-    .logosDiv img{
+    .logosDiv img {
         width: 80px;
         /* height: 50px; */
     }
 
     /* CHOOSE TABLE DIV */
-    .chooseDiv table{
+    .chooseDiv table {
         width: 95%;
     }
 
     /* MORE OF YOU DIV */
-    .box{
+    .box {
         width: 30%;
     }
+
     .box h3 {
         font-size: 22px;
         font-weight: 900;
         color: var(--purple);
     }
-    .box p{
+
+    .box p {
         font-size: 14px;
     }
 }
@@ -906,12 +910,14 @@ tbody .data1 {
 @media screen and (max-width: 767px) {
 
     body {
+        width: 100%;
+        margin: auto;
         overflow-x: hidden;
         font-size: 14px;
     }
 
     nav {
-
+        width: 100%;
         position: relative;
         height: 50px;
         padding: 3px 20px;
@@ -977,7 +983,7 @@ tbody .data1 {
     }
 
     .parentDiv {
-        padding: 0px 0px;
+        padding: 0px 10px;
     }
 
     .childDiv {
@@ -1013,6 +1019,11 @@ tbody .data1 {
     .ndicandcbn {
         justify-content: center;
         width: 100%;
+        margin: auto;
+    }
+
+    .cbn {
+        width: 30%;
     }
 
     .cbn p,
@@ -1035,11 +1046,6 @@ tbody .data1 {
     .bottomcards .card {
         width: 100%;
         font-weight: 900;
-    }
-
-    .card i,
-    .card img {
-        margin: 0;
     }
 
     /* THIRD DIV STYLING */
@@ -1125,18 +1131,24 @@ tbody .data1 {
 
     .rightDiv5 {
         width: 100%;
+        height: 50%;
     }
 
 
     /*  SIXTH DIV STYLING */
     .childDiv6 {
-        /* margin-top: 100px; */
+        margin-top: 100px;
         flex-direction: column-reverse;
         gap: 3rem;
     }
 
     .leftDiv6 {
         width: 100%;
+        margin-left: 20px;
+
+        img {
+            width: 100%;
+        }
     }
 
     .rightDiv6 {
@@ -1152,6 +1164,15 @@ tbody .data1 {
         text-align: center;
     }
 
+    .leftDiv7 {
+        width: 90%;
+        margin: auto;
+
+        img {
+            width: 100%;
+        }
+    }
+
 
     /* EIGHTH DIV STYLING */
     .childDiv8 {
@@ -1163,12 +1184,16 @@ tbody .data1 {
 
     .rightDiv8 {
         width: 100%;
+
+        img {
+            height: 75%;
+        }
     }
 
 
     /* TESTIMONY DIV STYLING */
     .testimoniesDiv {
-        margin-top: 150px;
+        margin-top: 100px;
         text-align: center;
     }
 
@@ -1197,5 +1222,23 @@ tbody .data1 {
     /* CHOOSE TABLE DIV */
     .chooseDiv table {
         width: 100%;
+    }
+
+    /* MORE OF YOU DIV */
+    .box {
+        width: 100%;
+    }
+    .moneyappDiv  .leftDiv{
+        margin-top: 40px;
+    }
+    .moneyappDiv .rightDiv {
+        display: none;
+    }
+
+
+    /* THE MONEY APP FOR AFRICANS DIV (BOTTOM) */
+    .moneyappDiv{
+        width: 90%;
+        flex-direction: column;
     }
 }
