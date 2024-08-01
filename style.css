@@ -62,8 +62,6 @@ nav {
     margin-top: 8px;
 }
 
-.dropdownlinks {}
-
 .signInDiv {
     display: flex;
     flex-wrap: wrap;
@@ -908,7 +906,7 @@ tbody .data1 {
 @media screen and (max-width: 467px) {
 
     body {
-        overflow-y: hidden;
+        overflow-x: hidden;
         font-size: 14px;
     }
 
@@ -987,8 +985,6 @@ tbody .data1 {
         justify-content: center;
         align-items: center;
     }
-
-
 
 
     /* FIRST DIV STYLING */
