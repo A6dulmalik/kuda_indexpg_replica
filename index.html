@@ -16,7 +16,6 @@
 </head>
 
 <body>
-
     <nav>
 
         <div class="logoandlinksDiv">
@@ -24,18 +23,42 @@
                 <img src="/images/kudalogo.png" alt="Logo">
             </div>
 
-            <a href="#" class="navlinks">
-                <li>Personal</li>
-                <li>Business</li>
-                <li>Company</li>
-                <li>Help</li>
-            </a>
+            <div href="#" class="navlinks navlists">
+                <li><a href="#">Personal<i class="fa-solid fa-caret-down"></i></a></li>
+                <li><a href="#">Business<i class="fa-solid fa-caret-down"></i></a></li>
+                <li class="company"><a href="#">Company<i class="fa-solid fa-caret-down"></i></a>
+                    
+                        <div class="dropdownlist">
+                            <a href="#" class="dropdownlinks">Blog</a>
+                            <a href="#" class="dropdownlinks">Press</a>
+                            <a href="#" class="dropdownlinks">Join Our Team</a>
+                            <a href="#" class="dropdownlinks">About Us</a>
+                        </div>
+                    
+                </li>
+                <li class="help"><a href="#">Help<i class="fa-solid fa-caret-down"></i></a>
+                    
+                        <div class="dropdownlist">
+                            <a href="#" class="dropdownlinks">Get Help</a>
+                            <a href="#" class="dropdownlinks">Scam Awareness</a>
+                            <a href="#" class="dropdownlinks">FAQs</a>
+                            <a href="#" class="dropdownlinks">Security</a>
+                            <a href="#" class="dropdownlinks">Contact Us</a>
+                            <a href="#" class="dropdownlinks">Self Help</a>
+                        </div>
+                    
+                </li>
+            </div>
         </div>
 
         <div class="signInDiv">
             <p>Sign In</p>
             <button>Join Kuda</button>
-            <img src="/images/ngflag.png" alt="Nigerian flag">
+            <div class="flagandbars">
+                <img src="/images/ngflag.png" alt="Nigerian flag" id="flag">
+                <i class="fa-solid fa-bars"></i>
+                <i class="fa-solid fa-xmark-large"></i>
+            </div class="flagandbars">
         </div>
 
     </nav>
@@ -552,9 +575,9 @@
     </main>
 
     <footer>
-        
-    </footer>
 
+    </footer>
+    <script src="/script.js"></script>
 </body>
 
 </html>

@@ -16,13 +16,14 @@ nav {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-    gap: 23.3rem;
+    justify-content: space-between;
     align-items: center;
-    padding: 10px;
-    box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.1);
-    /* position: fixed; */
+    padding: 10px 50px;
+    box-shadow: 12px 10px 5px rgba(0, 0, 0, 0.1);
+    position: fixed;
     background: white;
-    /* z-index: 10; */
+    font-size: 14px;
+    font-weight: 700;
 }
 
 .logoandlinksDiv {
@@ -30,26 +31,44 @@ nav {
     flex-wrap: wrap;
     gap: 6rem;
     align-items: center;
-    padding-left: 4rem;
+    color: black;
 }
 
 .navlinks {
     display: flex;
-    flex-wrap: wrap;
-    gap: 3.75rem;
-    align-items: center;
+    gap: 3rem;
     color: var(--purple);
-    font-size: 14px;
-    /* font-weight: 600; */
-    color: rgb(85, 31, 146);
+    /* display: none; */
 }
+
+.fa-caret-down {
+    margin-left: 7px;
+}
+
+.help,
+.company {
+    position: relative;
+}
+
+.dropdownlist {
+    display: none;
+}
+
+.help:hover .dropdownlist,
+.company:hover .dropdownlist {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    margin-top: 8px;
+}
+
+.dropdownlinks {}
 
 .signInDiv {
     display: flex;
     flex-wrap: wrap;
     gap: 2rem;
     align-items: center;
-    /* font-weight: 700; */
     color: rgb(85, 31, 146);
 }
 
@@ -65,6 +84,17 @@ nav {
     padding: 13px 36px;
     border: none;
     border-radius: 10px;
+}
+
+.flagandbars {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.flagandbars .fa-bars,
+.fa-xmark-large {
+    display: none;
 }
 
 /* Uniform styling (padding) for eight sections  */
@@ -183,18 +213,24 @@ nav {
 }
 
 .topcards .card {
+    display: flex;
+    flex-direction: column;
+
     width: 28%;
     padding: 20px;
     box-shadow: 3px 3px 10px rgb(236, 235, 235);
     border-radius: 5px;
 }
 
-.card i,
+
 .card img {
+    width: 28px;
+    height: 28px;
     background: lightblue;
     border-radius: 50%;
     margin: 1rem 0;
 }
+
 
 .bottomcards {
     display: flex;
@@ -533,14 +569,15 @@ nav {
 }
 
 /* CHOOSE TABLE DIV */
-.chooseDiv h2{
+.chooseDiv h2 {
     font-size: 32px;
     font-weight: 900;
     color: var(--purple);
     text-align: center;
     margin-bottom: 50px;
 }
-.chooseDiv table{
+
+.chooseDiv table {
     width: 75%;
     margin: auto;
     border: 1px solid rgb(236, 236, 236);
@@ -548,27 +585,33 @@ nav {
     border-collapse: collapse;
     box-shadow: 3px 3px 10px rgb(226, 226, 226);
 }
-thead th{
+
+thead th {
     border-bottom: 1px solid rgb(236, 236, 236);
-    padding: 2.5rem 0rem 1rem 2rem ;
+    padding: 2.5rem 0rem 1rem 2rem;
     text-align: left;
 }
-tbody td{
+
+tbody td {
     border-bottom: 1px solid rgb(236, 236, 236);
     padding: 1rem 0rem 1rem 2rem;
 }
-tbody .data1{
+
+tbody .data1 {
     font-weight: 700;
 }
-.lastrow{
+
+.lastrow {
     padding: 10rem 0rem 30rem 2rem;
 }
 
+
 /* MORE OF YOU DIV */
-.moreofyou{
+.moreofyou {
     margin-top: 100px;
 }
-.boxes{
+
+.boxes {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
@@ -576,7 +619,8 @@ tbody .data1{
     justify-content: center;
     align-items: center;
 }
-.box{
+
+.box {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
@@ -585,19 +629,21 @@ tbody .data1{
     padding: 20px;
     box-shadow: 3px 3px 10px rgb(226, 226, 226);
 }
-.box h3{
+
+.box h3 {
     font-size: 28px;
     font-weight: 900;
     color: var(--purple);
 }
-.box a{
+
+.box a {
     color: purple;
     text-decoration: underline;
 }
 
 
 /* THE MONEY APP FOR AFRICANS DIV (BOTTOM) */
-.moneyappDiv{
+.moneyappDiv {
     width: 80%;
     height: 300px;
     margin: auto;
@@ -608,12 +654,13 @@ tbody .data1{
     box-shadow: 8px 8px 20px rgb(187, 182, 182);
     margin-top: 150px;
 }
-.moneyappDiv .rightDiv{
+
+.moneyappDiv .rightDiv {
     height: 100%;
     display: flex;
     align-items: last baseline;
 
-    img{
+    img {
         height: 100%;
     }
 }
@@ -637,22 +684,297 @@ tbody .data1{
 
 /* RESPONSIVENESS */
 
-/* Mobile Screen */
-@media screen and (max-width: 767px) {
+/* Tablet screen/view */
+@media screen and (min-width: 767px) and (max-width: 1200px) {
+
     body {
         width: 100%;
+        /* font-size: 16px; */
+        /* Adjust font size for tablets */
     }
 
     nav {
-        gap: 0px;
+        position: relative;
+        height: 50px;
+        padding: 3px 20px;
+        box-shadow: none;
+    }
+
+    .navlinks {
+        flex-direction: column;
+        position: absolute;
+        top: 150px;
+        left: 20px;
+        width: 100%;
+        height: 120vh;
+        background: white;
+    }
+
+    .navlinks li {
+        padding: 20px 0;
+        border-bottom: 1px solid lightgray;
 
     }
 
-    .logoandlinksDiv,
+    .fa-caret-down {
+        float: inline-end;
+    }
+
+    .signInDiv p {
+        position: absolute;
+        left: 23%;
+        top: 80px;
+        background: #DFE3FF;
+        padding: 12px 26px;
+        border-radius: 10px;
+        font-size: 14px;
+    }
+
+    .signInDiv button {
+        position: absolute;
+        left: 3%;
+        top: 80px;
+    }
+
+    .flagandbars {
+        position: absolute;
+        top: 20%;
+        right: 5%;
+    }
+
+    .flagandbars .fa-bars {
+        display: block;
+        font-size: 28px;
+    }
+
+    .fa-xmark-large {
+        font-size: 24px;
+    }
+
     .navlinks,
-    .signInDiv {
-        gap: 0;
-        /* display: none; */
+    .signInDiv button,
+    .signInDiv p {
+        display: none;
+        position: fixed;
+    }
+
+    .parentDiv {
+        padding: 100px 20px;
+    }
+
+    /* FIRST DIV STYLING */
+    .childDiv1 {
+        width: 100%;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .leftDiv1 {
+        width: 45%;
+    }
+
+    .rightDiv1 {
+        width: 55%;
+        margin-top: 150px;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    /* SECOND DIV STYLING */
+    .childDiv2 {
+        margin-top: 150px;
+        margin-bottom: 8rem;
+    }
+
+    .topcards,
+    .bottomcards {
+        font-size: 10px;
+        font-weight: 900;
+    }
+
+    .topcards .card {
+        width: 31%;
+    }
+
+    .bottomcards .card {
+        width: 48%;
+    }
+
+    /* THIRD DIV STYLING */
+    .childDiv3 {
+        gap: 5rem;
+        margin-bottom: 5rem;
+    }
+
+    .leftDiv3 {
+        width: 50%;
+        text-align: center;
+    }
+
+    .leftDiv3 h2 {
+        width: 60%;
+        margin: auto;
+    }
+
+
+    /* FOURTH DIV STYLING */
+    .childDiv4 {
+        flex-direction: column-reverse;
+        gap: 10rem;
+    }
+
+    .rightDiv4 {
+        text-align: center;
+        width: 400px;
+    }
+
+    .rightDiv4 p {
+        width: 90%;
+    }
+
+    /* FIFTH DIV STYLING */
+    .childDiv5 {
+        gap: 5rem;
+        margin-top: 150px;
+        text-align: center;
+    }
+
+    .leftDiv5 p {
+        width: 85%;
+        margin: auto;
+    }
+
+    /*  SIXTH DIV STYLING */
+    .childDiv6 {
+        gap: 5rem;
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+
+    .rightDiv6 p {
+        margin-bottom: 20px !important;
+        width: 97%;
+    }
+
+
+    /* SEVENTH DIV STYLING */
+    .childDiv7 {
+        margin-top: 100px;
+        gap: 5rem;
+        text-align: center;
+    }
+
+    .rightDiv7 p {
+        width: 99%;
+    }
+
+    /* EIGHTH DIV STYLING */
+    .childDiv8 {
+        gap: 5rem;
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+
+    /* LOGOS SECTION  */
+    .logosDiv img{
+        width: 80px;
+        /* height: 50px; */
+    }
+
+    /* CHOOSE TABLE DIV */
+    .chooseDiv table{
+        width: 95%;
+    }
+
+    /* MORE OF YOU DIV */
+    .box{
+        width: 30%;
+    }
+    .box h3 {
+        font-size: 22px;
+        font-weight: 900;
+        color: var(--purple);
+    }
+    .box p{
+        font-size: 14px;
+    }
+}
+
+
+
+/* For mobile screens (max-width: 467px) */
+@media screen and (max-width: 467px) {
+
+    body {
+        font-size: 14px;
+    }
+
+    nav {
+
+        position: relative;
+        height: 50px;
+        padding: 3px 20px;
+    }
+
+    .navlinks {
+        flex-direction: column;
+        position: absolute;
+        top: 150px;
+        left: 20px;
+        width: 100%;
+        height: 100vh;
+        background: white;
+    }
+
+    .navlinks li {
+        padding: 20px 0;
+        border-bottom: 1px solid lightgray;
+
+    }
+
+    .fa-caret-down {
+        float: inline-end;
+    }
+
+    .signInDiv p {
+        position: absolute;
+        left: 42%;
+        top: 60px;
+        background: #DFE3FF;
+        padding: 12px 30px;
+        border-radius: 10px;
+        font-size: 14px;
+    }
+
+    .signInDiv button {
+        position: absolute;
+        left: 5%;
+        top: 60px;
+        padding: 12px 26px;
+    }
+
+    .flagandbars {
+        position: absolute;
+        top: 20%;
+        right: 5%;
+    }
+
+    .flagandbars .fa-bars {
+        display: block;
+        font-size: 28px;
+    }
+
+    .fa-xmark-large {
+        font-size: 24px;
+    }
+
+    .navlinks,
+    .signInDiv button,
+    .signInDiv p {
+        display: none;
+        position: fixed;
     }
 
     .parentDiv {
@@ -665,23 +987,26 @@ tbody .data1{
         align-items: center;
     }
 
-    /* .leftDiv{
-        width: 100%;
-        text-align: center;
-    }
-    .rightDiv{
-        width: 100%;
-        text-align: center;
-    } */
+
+
 
     /* FIRST DIV STYLING */
     .childDiv1 {
         justify-content: center;
         text-align: center;
+        width: 100%;
+        margin-top: 0px;
     }
 
     .leftDiv1 {
         width: 100%;
+    }
+
+    .leftDiv1 p {
+        font-size: 24px;
+        width: 80%;
+        margin: auto;
+        margin-bottom: 20px;
     }
 
     .leftDiv1 .imageDiv {
@@ -690,6 +1015,12 @@ tbody .data1{
 
     .ndicandcbn {
         justify-content: center;
+        width: 100%;
+    }
+
+    .cbn p,
+    .ndic p {
+        font-size: 10px !important;
     }
 
     .rightDiv1 img {
@@ -806,10 +1137,12 @@ tbody .data1{
         flex-direction: column-reverse;
         gap: 3rem;
     }
-    .leftDiv6{
+
+    .leftDiv6 {
         width: 100%;
     }
-    .rightDiv6{
+
+    .rightDiv6 {
         width: 100%;
         text-align: center;
     }
@@ -824,13 +1157,14 @@ tbody .data1{
 
 
     /* EIGHTH DIV STYLING */
-    .childDiv8{
+    .childDiv8 {
         flex-direction: column-reverse;
         gap: 5rem;
         width: 100%;
         text-align: center;
     }
-    .rightDiv8{
+
+    .rightDiv8 {
         width: 100%;
     }
 
@@ -840,29 +1174,31 @@ tbody .data1{
         margin-top: 150px;
         text-align: center;
     }
-    .testimoniesDiv h2{
+
+    .testimoniesDiv h2 {
         width: 80%;
         margin: auto;
     }
 
 
     /* LOGOS SECTION  */
-    .logo{
+    .logo {
         width: 30%;
     }
 
 
     /* PARTNERS DIV STYLING */
-    .partnersDiv{
+    .partnersDiv {
         margin-bottom: 100px;
 
     }
-    .partnerslogoDiv{
+
+    .partnerslogoDiv {
         width: 100%;
     }
 
     /* CHOOSE TABLE DIV */
-    .chooseDiv table{
+    .chooseDiv table {
         width: 100%;
     }
 }
