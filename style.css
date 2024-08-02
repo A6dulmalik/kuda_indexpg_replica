@@ -1132,8 +1132,6 @@ footer {
 
     body {
         width: 100%;
-        min-width: 380px;
-        margin: auto;
         overflow-x: hidden;
     }
 
