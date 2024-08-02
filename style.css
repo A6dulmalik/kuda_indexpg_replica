@@ -24,6 +24,7 @@ nav {
     background: white;
     font-size: 14px;
     font-weight: 700;
+    z-index: 20;
 }
 
 .logoandlinksDiv {
@@ -220,12 +221,10 @@ nav {
 }
 
 .cardicon {
+    width: fit-content;
+    height: fit-content;
     background: rgb(223, 227, 255);
     border-radius: 50%;
-    /* margin: 1rem 0; */
-}
-
-.cardicon {
     padding: 10px;
 }
 
@@ -706,14 +705,10 @@ tbody .data1 {
     right: 2%;
     object-fit: contain;
 
-
-    img {
-        /* height: 100%; */
-    }
 }
 
 .rightDivimg2 {
-    visibility: none;
+   display: none;
     
 
 }
