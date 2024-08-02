@@ -1,3 +1,4 @@
+let main = document.querySelector('main');
 let nav = document.querySelector('.nav');
 let bars = document.querySelector('.fa-bars');
 let cancel = document.querySelector('.fa-xmark-large');
@@ -12,6 +13,7 @@ const signInParagraph = document.querySelector('.signInDiv p');
 bars.addEventListener('click', function(){
     bars.style.display = 'none';
     flag.style.display = 'none';
+    main.style.display = 'none';
     cancel.style.display = 'block';
     navlinks.style.display = 'flex';
     signInButton.style.display = 'block';
@@ -24,6 +26,7 @@ bars.addEventListener('click', function(){
 cancel.addEventListener('click', function(){
     flag.style.display = 'block';
     bars.style.display = 'block';
+    main.style.display = 'block';
     cancel.style.display = 'none';
     navlinks.style.display = 'none';
     signInButton.style.display = 'none';

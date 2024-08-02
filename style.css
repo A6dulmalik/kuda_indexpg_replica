@@ -7,7 +7,7 @@
 }
 
 :root {
-    --purple: #40196D;
+    --purple: rgb(64, 25, 109);
     font-family: "Mulish", sans-serif;
 }
 
@@ -157,11 +157,11 @@ nav {
 }
 
 .ndicandcbn {
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
     gap: 16px;
     align-items: center;
-    /* justify-content: baseline; */
 }
 
 .cbn,
@@ -171,7 +171,7 @@ nav {
 
 .cbn p,
 .ndic p {
-    font-size: 11px !important;
+    font-size: 12px !important;
     color: #a8a7a7;
     margin-right: 6px;
 }
@@ -213,22 +213,21 @@ nav {
 .topcards .card {
     display: flex;
     flex-direction: column;
-
     width: 28%;
     padding: 20px;
-    box-shadow: 3px 3px 10px rgb(236, 235, 235);
+    box-shadow: 3px 3px 10px rgb(213, 218, 224);
     border-radius: 5px;
 }
 
-
-.card img {
-    width: 28px;
-    height: 28px;
-    background: lightblue;
+.cardicon {
+    background: rgb(223, 227, 255);
     border-radius: 50%;
-    margin: 1rem 0;
+    /* margin: 1rem 0; */
 }
 
+.cardicon {
+    padding: 10px;
+}
 
 .bottomcards {
     display: flex;
@@ -243,8 +242,14 @@ nav {
 .bottomcards .card {
     width: 40%;
     padding: 20px;
-    box-shadow: 2px 2px 2px 1px lightgray;
+    box-shadow: 2px 2px 2px 1px rgb(213, 218, 224);
     border-radius: 5px;
+}
+
+.topcards .card p,
+.bottomcards .card p {
+    font-weight: 800;
+    color: var(--purple);
 }
 
 
@@ -520,8 +525,8 @@ nav {
     gap: 10px;
 }
 
-.imageDiv img {
-    /* border-radius: 50%; */
+.profileimageDiv img {
+    border-radius: 50%;
 }
 
 .imageDiv label {
@@ -625,6 +630,17 @@ tbody .data1 {
     box-shadow: 3px 3px 10px rgb(226, 226, 226);
 }
 
+.box .icon {
+    width: fit-content;
+    height: fit-content;
+    background: #DFE3FF;
+    border-radius: 50%;
+}
+
+.box .icon i {
+    padding: 12px;
+}
+
 .box h3 {
     font-size: 28px;
     font-weight: 900;
@@ -643,26 +659,63 @@ tbody .data1 {
     height: 300px;
     margin: auto;
     display: flex;
-    border: 1px solid;
-    border-radius: 10px;
-    background: rgb(243, 247, 248);
+    justify-content: space-between;
+    /* border: 1px solid; */
+    border-radius: 5px;
+    background: #eaecfc;
     box-shadow: 8px 8px 20px rgb(187, 182, 182);
     margin-top: 150px;
+    padding: 40px;
     position: relative;
-    z-index: 20;
+    /* z-index: 1; */
+    /* object-fit: cover; */
 }
 
-.moneyappDiv .rightDiv {
-    height: 100%;
+.moneyappDiv .leftDiv {
+    width: 35%;
+
+    h2 {
+        text-align: start;
+        margin-bottom: 12px;
+    }
+
+    P {
+        font-size: 14px;
+    }
+}
+
+.moneyappDiv .leftDiv button {
+    margin-top: 38px;
+    margin-bottom: 380px;
+    padding: 16px 38px;
+    border: none;
+    border-radius: 10px;
+    background: var(--purple);
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.moneyappDiv .rightDivimg1 img {
+    height: 300px;
     display: flex;
     align-items: last baseline;
     position: absolute;
-    z-index: 5;
-    bottom: -50%;
+    z-index: 10;
+    top: 0%;
+    right: 2%;
+    object-fit: contain;
+
 
     img {
-        height: 100%;
+        /* height: 100%; */
     }
+}
+
+.rightDivimg2 {
+    visibility: none;
+    
+
 }
 
 
@@ -911,13 +964,14 @@ tbody .data1 {
 
     body {
         width: 100%;
+        min-width: 380px;
         margin: auto;
         overflow-x: hidden;
-        font-size: 14px;
     }
 
     nav {
         width: 100%;
+        min-width: 380px;
         position: relative;
         height: 50px;
         padding: 3px 20px;
@@ -1002,12 +1056,13 @@ tbody .data1 {
     }
 
     .leftDiv1 {
+        margin-top: 80px;
         width: 100%;
     }
 
     .leftDiv1 p {
-        font-size: 24px;
-        width: 80%;
+        width: 90%;
+        /* font-size: 22px; */
         margin: auto;
         margin-bottom: 20px;
     }
@@ -1016,19 +1071,30 @@ tbody .data1 {
         justify-content: center;
     }
 
+    .leftDiv1 .imageDiv {
+        margin-bottom: 16px;
+    }
+
     .ndicandcbn {
         justify-content: center;
+        gap: 20px;
         width: 100%;
         margin: auto;
     }
 
-    .cbn {
-        width: 30%;
-    }
-
     .cbn p,
     .ndic p {
-        font-size: 10px !important;
+        margin-right: 6px;
+    }
+
+    .cbn img {
+        width: 23px;
+        height: 23px;
+    }
+
+    .ndic img {
+        width: 50px;
+        height: 20px;
     }
 
     .rightDiv1 img {
@@ -1040,18 +1106,29 @@ tbody .data1 {
     .topcards,
     .bottomcards {
         flex-direction: column;
+        gap: 26px;
     }
 
     .topcards .card,
     .bottomcards .card {
-        width: 100%;
+        width: 95%;
+        font-weight: 900;
+        display: flex;
+        flex-direction: row;
+        gap: 24px;
+        align-items: center;
+    }
+
+    .topcards .card p,
+    .bottomcards .card p {
         font-weight: 900;
     }
+
 
     /* THIRD DIV STYLING */
     .childDiv3 {
         gap: 2rem;
-        margin-bottom: 6rem;
+        margin-bottom: 7rem;
     }
 
     .leftDiv3 {
@@ -1065,7 +1142,7 @@ tbody .data1 {
     }
 
     .leftDiv3 p {
-        margin: 0 0;
+        width: 95%;
     }
 
     .rightDiv3 {
@@ -1093,7 +1170,7 @@ tbody .data1 {
     }
 
     .slipdiv1 .slipchild {
-        height: 30px;
+        height: 26px;
     }
 
     .slipdiv2 .slipchild {
@@ -1101,12 +1178,17 @@ tbody .data1 {
     }
 
     .slipdiv1 {
+        top: 20px;
         left: -10%;
     }
 
     .slipdiv2 {
-        margin-top: 40px;
+        top: 12px;
         right: -10%;
+    }
+
+    .slipdiv2 .slipchild .icon1 {
+        font-size: 12px;
     }
 
     .slipchild p {
@@ -1127,6 +1209,12 @@ tbody .data1 {
     .leftDiv5 {
         width: 100%;
         text-align: center;
+    }
+
+    .leftDiv5 p {
+        line-height: 20px;
+        width: 95%;
+        margin: auto;
     }
 
     .rightDiv5 {
@@ -1154,6 +1242,10 @@ tbody .data1 {
     .rightDiv6 {
         width: 100%;
         text-align: center;
+    }
+
+    .rightDiv p {
+        width: 94%;
     }
 
 
@@ -1186,7 +1278,9 @@ tbody .data1 {
         width: 100%;
 
         img {
-            height: 75%;
+            width: 90%;
+            height: 67%;
+
         }
     }
 
@@ -1198,47 +1292,83 @@ tbody .data1 {
     }
 
     .testimoniesDiv h2 {
-        width: 80%;
+        width: 100%;
         margin: auto;
     }
 
 
     /* LOGOS SECTION  */
-    .logo {
-        width: 30%;
-    }
+    /* .logo {
+        display: grid; 
+         grid-template-rows: 3 1fr;
+    } */
 
 
     /* PARTNERS DIV STYLING */
     .partnersDiv {
         margin-bottom: 100px;
-
+        width: 100%;
+        height: max-content;
     }
 
     .partnerslogoDiv {
-        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 3rem;
+        justify-content: center;
+        align-items: center;
     }
 
     /* CHOOSE TABLE DIV */
     .chooseDiv table {
-        width: 100%;
+        width: 90%;
     }
 
     /* MORE OF YOU DIV */
     .box {
-        width: 100%;
+        width: 90%;
     }
-    .moneyappDiv  .leftDiv{
+
+    .moneyappDiv .leftDiv {
         margin-top: 40px;
     }
+
     .moneyappDiv .rightDiv {
         display: none;
     }
 
 
     /* THE MONEY APP FOR AFRICANS DIV (BOTTOM) */
-    .moneyappDiv{
+    .moneyappDiv {
         width: 90%;
         flex-direction: column;
     }
+
+
+    /* THE MONEY APP FOR AFRICANS DIV (BOTTOM) */
+    .moneyappDiv {
+        flex-direction: column;
+        position: initial;
+    }
+
+    .moneyappDiv .leftDiv {
+        width: 100%;
+        height: 600px;
+        text-align: center;
+        margin-bottom: 12px;
+        font-size: 14px;
+
+        h2 {
+            text-align: center;
+        }
+    }
+    .moneyappDiv .rightDivimg1 img,
+    .moneyappDiv .leftDiv button{
+        display: none;
+    }
+    .rightDivimg2 {
+        visibility: visible;
+        
+    }
+
 }
