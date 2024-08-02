@@ -11,6 +11,10 @@
     font-family: "Mulish", sans-serif;
 }
 
+body {
+    position: relative;
+}
+
 /* NAVBAR STYLING */
 nav {
     width: 100%;
@@ -22,8 +26,6 @@ nav {
     box-shadow: 12px 10px 5px rgba(0, 0, 0, 0.1);
     position: fixed;
     background: white;
-    font-size: 14px;
-    font-weight: 700;
     z-index: 20;
 }
 
@@ -38,6 +40,8 @@ nav {
 .navlinks {
     display: flex;
     gap: 3rem;
+    font-size: 14px;
+    font-weight: 600;
     color: var(--purple);
     /* display: none; */
 }
@@ -51,16 +55,45 @@ nav {
     position: relative;
 }
 
+.dropdowncontainer {
+    /* background: #a8a7a7;
+    width: 800px;
+    height: 100vh;
+    opacity: 0.5;
+    position: absolute; */
+}
+
 .dropdownlist {
     display: none;
 }
 
 .help:hover .dropdownlist,
 .company:hover .dropdownlist {
+    width: 150px;
     display: flex;
     flex-direction: column;
+    gap: 32px;
+    background: white;
+    padding: 16px;
     position: absolute;
-    margin-top: 8px;
+    top: 20px;
+    font-weight: 500;
+    /* z-index: 25; */
+}
+
+.help:hover .dropdownoverlay,
+.company:hover .dropdownoverlay {
+    width: 100%;
+    height: 100%;
+    background: #a7a7a8;
+    opacity: 0.5;
+    position: absolute;
+    top: 0;
+    /* z-index: 20; */
+}
+
+.dropdownoverlay {
+    display: none;
 }
 
 .signInDiv {
@@ -610,6 +643,14 @@ tbody .data1 {
     margin-top: 100px;
 }
 
+.moreofyou h2 {
+    font-size: 32px;
+    font-weight: 900;
+    color: var(--purple);
+    text-align: center;
+    margin-bottom: 50px;
+}
+
 .boxes {
     width: 100%;
     display: flex;
@@ -708,14 +749,146 @@ tbody .data1 {
 }
 
 .rightDivimg2 {
-   display: none;
-    
+    display: none;
+
 
 }
 
 
+/* FOOTER STYLING  */
+footer {
+    border-top: 1px solid rgb(226, 225, 225);
+    margin-top: 150px;
+}
+
+/*  KUDA SECTIONS DIV */
+.kudatablecontainer {
+    width: 100%;
+    /* margin: auto; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 3rem;
+    margin-top: 30px;
+}
+
+.tablecontainer {
+    width: 70%;
+}
+
+.tablecontainer table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.tablecontainer th,
+.tablecontainer td {
+    border-bottom: none;
+}
+
+.imagecontainer {
+    margin-top: 40px;
+}
+
+.tablecontainer table th,
+.tablecontainer table td {
+    color: var(--purple);
+}
+
+.tablecontainer table th {
+    font-size: 14px;
+}
+
+.tablecontainer table td {
+    font-size: 13px;
+}
 
 
+/* APPSTORE, GOOGLE AND SIGNIN DIV   */
+.appstorecontainer {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 1px;
+    margin-left: 130px;
+}
+
+
+/* MEDIA LINKS AND ADDRESS  */
+.medialinksandaddressContainer {
+    margin: 20px 0;
+}
+
+.medialinksandaddressContainer h3 {
+    text-align: center;
+    font-size: 14px;
+    font-weight: 500;
+    color: #a8a7a7;
+    margin-bottom: 70px;
+}
+
+.contactDiv h4,
+.address h4 {
+    color: var(--purple);
+    font-size: 14px;
+    font-weight: 600;
+    /* padding-bottom: 14px; */
+}
+.contactDiv a{
+    text-decoration: underline;
+}
+.contactDiv,
+.address{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    /* justify-content: space-between; */
+}
+.contactDiv .socialicons {
+    display: flex;
+    gap: 1rem;
+}
+.icon {
+    /* width: 26px;
+    height: 26px; */
+    border: 1px solid var(--purple);
+    /* border-radius: 50%; */
+    border-radius: 18px;
+    background: #e0e0e6;
+}
+.icon i{
+    font-size: 12px;
+    padding: 8px;
+    margin: auto;
+    color: var(--purple);
+}
+.contactandaddressDiv {
+    width: 82%;
+    margin: auto;
+    display: flex;
+    gap: 5.5rem;
+
+}
+.address p,
+.contactDiv a {
+    font-size: 13px;
+    line-height: 20px;
+}
+
+
+/* FOOTNOTE  */
+.footnote{
+    width: 100%;
+    margin: auto;
+    font-size: 13px;
+    color: #a7a7a8;
+    margin-top: 50px;
+}
+.footnote p{
+    margin: 30px 0;
+    line-height: 24px;
+}
 
 
 
@@ -1357,13 +1530,15 @@ tbody .data1 {
             text-align: center;
         }
     }
+
     .moneyappDiv .rightDivimg1 img,
-    .moneyappDiv .leftDiv button{
+    .moneyappDiv .leftDiv button {
         display: none;
     }
+
     .rightDivimg2 {
         visibility: visible;
-        
+
     }
 
 }
