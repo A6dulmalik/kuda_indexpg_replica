@@ -1128,7 +1128,7 @@ footer {
 
 
 /* For mobile screens (max-width: 467px) */
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 467px) {
 
     body {
         width: 100%;
