@@ -272,7 +272,8 @@ nav {
 }
 
 .bottomcards .card {
-    width: 40%;
+    display: flex;
+    flex-direction: column;
     padding: 20px;
     box-shadow: 2px 2px 2px 1px rgb(213, 218, 224);
     border-radius: 5px;
@@ -289,7 +290,7 @@ nav {
 .childDiv3 {
     flex-wrap: wrap;
     gap: 10rem;
-    margin-bottom: 17rem;
+    margin-bottom: 10rem;
 }
 
 .leftDiv3 {
@@ -392,7 +393,7 @@ nav {
 /* FIFTH DIV STYLING */
 .childDiv5 {
     gap: 10rem;
-    margin-top: 220px;
+    margin-top: 100px;
 }
 
 .leftDiv5 {
@@ -414,8 +415,9 @@ nav {
 }
 
 .rightDiv5 {
-    height: 29rem;
-    width: 30rem;
+    height: 28rem;
+    width: 27.5rem;
+    /* border: 1px solid; */
     /* box-shadow: ; */
 
     img {
@@ -427,7 +429,7 @@ nav {
 
 /*  SIXTH DIV STYLING */
 .childDiv6 {
-    margin-top: 180px;
+    margin-top: 100px;
     gap: 7rem;
 }
 
@@ -446,6 +448,15 @@ nav {
     color: rgb(85, 8, 85);
 }
 
+.leftDiv6 {
+    width: 28rem;
+    /* border: 1px solid; */
+
+    img {
+        width: 100%;
+    }
+}
+
 
 /* SEVENTH DIV STYLING */
 .childDiv7 {
@@ -453,8 +464,20 @@ nav {
     gap: 10rem;
 }
 
+.leftDiv7 {
+    width: 29rem;
+    /* height: 28rem; */
+
+    img {
+        width: 100%;
+        /* height: 100%; */
+    }
+
+}
+
 .rightDiv7 {
-    width: 380px;
+    width: 324px;
+    text-align: start;
 }
 
 .rightDiv7 p {
@@ -471,22 +494,27 @@ nav {
 
 /* EIGHTH DIV STYLING */
 .childDiv8 {
-    gap: 12rem;
+    width: 100%;
+    gap: 10rem;
     margin-top: 120px;
+
+
 }
 
 .rightDiv8 {
-    width: 500px;
-    height: 490px;
-}
+    width: 28rem;
+    /* height: 28rem;     */
 
-.rightDiv8 img {
-    width: 100%;
-    height: 100%;
+
+    img {
+        width: 100%;
+        height: 100%;
+    }
 }
 
 .leftDiv8 {
     width: 370px;
+
 }
 
 .leftDiv8 p {
@@ -571,7 +599,7 @@ nav {
 .logosDiv {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
     margin: 80px 0;
 }
@@ -580,7 +608,6 @@ nav {
 /* PARTNERS DIV STYLING */
 .partnersDiv {
     height: 300px;
-    /* background: rgb(250, 249, 249); */
     background: #FBFBFB;
     padding: 50px;
 }
@@ -596,7 +623,7 @@ nav {
 .partnerslogoDiv {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
 }
 
@@ -662,7 +689,7 @@ tbody .data1 {
 
 .box {
     display: flex;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
     flex-direction: column;
     gap: 2rem;
     width: 25%;
@@ -675,6 +702,7 @@ tbody .data1 {
     height: fit-content;
     background: #DFE3FF;
     border-radius: 50%;
+    border: none;
 }
 
 .box .icon i {
@@ -682,11 +710,13 @@ tbody .data1 {
 }
 
 .box h3 {
-    font-size: 28px;
     font-weight: 900;
     color: var(--purple);
 }
-
+.box p,
+.box a{
+    font-size: 14px;
+}
 .box a {
     color: purple;
     text-decoration: underline;
@@ -703,7 +733,7 @@ tbody .data1 {
     /* border: 1px solid; */
     border-radius: 5px;
     background: #eaecfc;
-    box-shadow: 8px 8px 20px rgb(187, 182, 182);
+    box-shadow: 4px 4px 16px rgb(212, 210, 210);
     margin-top: 150px;
     padding: 40px;
     position: relative;
@@ -750,6 +780,8 @@ tbody .data1 {
 
 .rightDivimg2 {
     display: none;
+    position: absolute;
+
 
 
 }
@@ -757,6 +789,7 @@ tbody .data1 {
 
 /* FOOTER STYLING  */
 footer {
+    width: 100%;
     border-top: 1px solid rgb(226, 225, 225);
     margin-top: 150px;
 }
@@ -835,20 +868,24 @@ footer {
     font-weight: 600;
     /* padding-bottom: 14px; */
 }
-.contactDiv a{
+
+.contactDiv a {
     text-decoration: underline;
 }
+
 .contactDiv,
-.address{
+.address {
     display: flex;
     flex-direction: column;
     gap: 1rem;
     /* justify-content: space-between; */
 }
+
 .contactDiv .socialicons {
     display: flex;
     gap: 1rem;
 }
+
 .icon {
     /* width: 26px;
     height: 26px; */
@@ -857,12 +894,14 @@ footer {
     border-radius: 18px;
     background: #e0e0e6;
 }
-.icon i{
+
+.icon i {
     font-size: 12px;
     padding: 8px;
     margin: auto;
     color: var(--purple);
 }
+
 .contactandaddressDiv {
     width: 82%;
     margin: auto;
@@ -870,6 +909,7 @@ footer {
     gap: 5.5rem;
 
 }
+
 .address p,
 .contactDiv a {
     font-size: 13px;
@@ -878,14 +918,15 @@ footer {
 
 
 /* FOOTNOTE  */
-.footnote{
-    width: 100%;
+.footnote {
+    width: 93%;
     margin: auto;
     font-size: 13px;
     color: #a7a7a8;
     margin-top: 50px;
 }
-.footnote p{
+
+.footnote p {
     margin: 30px 0;
     line-height: 24px;
 }
@@ -1127,17 +1168,22 @@ footer {
 
 
 
-/* For mobile screens (max-width: 467px) */
-@media screen and (max-width: 467px) {
+/* For mobile screens  */
+@media screen and (max-width: 767px) {
 
     body {
+
         width: 100%;
-        overflow-x: hidden;
+        overflow-x: hidden !important;
+    }
+    main{
+        width: 100%;
+        overflow-x: hidden !important;
+
     }
 
     nav {
-        width: 100%;
-        min-width: 380px;
+        /* width: 100%; */
         position: relative;
         height: 50px;
         padding: 3px 20px;
@@ -1203,10 +1249,13 @@ footer {
     }
 
     .parentDiv {
-        padding: 0px 10px;
+        width: 100%;
+        padding: 0px 0px;
     }
 
     .childDiv {
+        width: 100%;
+        overflow-x: hidden;
         flex-direction: column;
         justify-content: center;
         align-items: center;
@@ -1218,16 +1267,15 @@ footer {
         justify-content: center;
         text-align: center;
         width: 100%;
-        margin-top: 0px;
     }
 
     .leftDiv1 {
         margin-top: 80px;
-        width: 100%;
+        width: 78%;
     }
 
     .leftDiv1 p {
-        width: 90%;
+        width: 80%;
         /* font-size: 22px; */
         margin: auto;
         margin-bottom: 20px;
@@ -1245,7 +1293,7 @@ footer {
         justify-content: center;
         gap: 20px;
         width: 100%;
-        margin: auto;
+        /* margin: auto; */
     }
 
     .cbn p,
@@ -1269,24 +1317,26 @@ footer {
 
 
     /* SECOND DIV STYLING */
+    .childDiv2 {
+        margin-top: 28px;
+    }
+
     .topcards,
     .bottomcards {
-        flex-direction: column;
-        gap: 26px;
+        width: 100%;
     }
 
     .topcards .card,
     .bottomcards .card {
-        width: 95%;
-        font-weight: 900;
-        display: flex;
         flex-direction: row;
-        gap: 24px;
-        align-items: center;
+        gap: 16px;
+        width: 70%;
+        padding: 30px;
     }
 
     .topcards .card p,
     .bottomcards .card p {
+        width: 100%;
         font-weight: 900;
     }
 
@@ -1300,19 +1350,23 @@ footer {
     .leftDiv3 {
         width: 100%;
         text-align: center;
+        padding-bottom: 20px;
     }
 
     .leftDiv3 h2 {
-        width: 60%;
+        width: 27%;
         margin: auto;
+        padding-bottom: 20px;
     }
 
     .leftDiv3 p {
-        width: 95%;
+        width: 50%;
+        margin: auto;
+        padding-bottom: 20px;
     }
 
     .rightDiv3 {
-        width: 100%;
+        width: 60%;
     }
 
     .rightDiv3 img {
@@ -1363,7 +1417,11 @@ footer {
 
     .rightDiv4 {
         text-align: center;
-        width: 100%;
+        width: 60%;
+    }
+
+    .rightDiv4 p {
+        width: 85%;
     }
 
     /* FIFTH DIV STYLING */
@@ -1373,7 +1431,6 @@ footer {
     }
 
     .leftDiv5 {
-        width: 100%;
         text-align: center;
     }
 
@@ -1381,11 +1438,6 @@ footer {
         line-height: 20px;
         width: 95%;
         margin: auto;
-    }
-
-    .rightDiv5 {
-        width: 100%;
-        height: 50%;
     }
 
 
@@ -1396,8 +1448,12 @@ footer {
         gap: 3rem;
     }
 
+    .rightDiv6 {
+        text-align: center;
+    }
+
     .leftDiv6 {
-        width: 100%;
+        /* width: 20%; */
         margin-left: 20px;
 
         img {
@@ -1405,30 +1461,17 @@ footer {
         }
     }
 
-    .rightDiv6 {
-        width: 100%;
-        text-align: center;
-    }
-
-    .rightDiv p {
-        width: 94%;
-    }
 
 
     /* SEVENTH DIV STYLING */
     .childDiv7 {
         gap: 5rem;
         width: 100%;
-        text-align: center;
     }
 
-    .leftDiv7 {
-        width: 90%;
-        margin: auto;
+    .rightDiv7 {
+        text-align: center;
 
-        img {
-            width: 100%;
-        }
     }
 
 
@@ -1440,17 +1483,7 @@ footer {
         text-align: center;
     }
 
-    .rightDiv8 {
-        width: 100%;
-
-        img {
-            width: 90%;
-            height: 67%;
-
-        }
-    }
-
-
+    
     /* TESTIMONY DIV STYLING */
     .testimoniesDiv {
         margin-top: 100px;
@@ -1464,10 +1497,14 @@ footer {
 
 
     /* LOGOS SECTION  */
-    /* .logo {
-        display: grid; 
-         grid-template-rows: 3 1fr;
-    } */
+    .logosDiv {
+        gap: 5rem;
+        /* display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 32px;
+        place-items: start;
+        align-items: center; */
+    }
 
 
     /* PARTNERS DIV STYLING */
@@ -1480,19 +1517,24 @@ footer {
     .partnerslogoDiv {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        gap: 3rem;
+        gap: 32px;
         justify-content: center;
         align-items: center;
     }
 
     /* CHOOSE TABLE DIV */
     .chooseDiv table {
-        width: 90%;
+        width: 100%;
     }
 
     /* MORE OF YOU DIV */
-    .box {
+    .boxes {
+        flex-direction: column;
+    }
+    .box{
+        /* gap: 16px; */
         width: 90%;
+
     }
 
     .moneyappDiv .leftDiv {
@@ -1506,15 +1548,20 @@ footer {
 
     /* THE MONEY APP FOR AFRICANS DIV (BOTTOM) */
     .moneyappDiv {
-        width: 90%;
+        width: 100%;
+        /* height: 300px; */
         flex-direction: column;
+        position: unset;
+    }
+    .moneyappDiv .leftDiv{
+        width: 100%;
     }
 
 
     /* THE MONEY APP FOR AFRICANS DIV (BOTTOM) */
     .moneyappDiv {
+        width: 70%;
         flex-direction: column;
-        position: initial;
     }
 
     .moneyappDiv .leftDiv {
@@ -1535,8 +1582,40 @@ footer {
     }
 
     .rightDivimg2 {
-        visibility: visible;
+        display: flex;
+        position: absolute;
 
     }
+
+
+    /* FOOTER STYLING  */
+
+    /*  KUDA SECTIONS DIV */
+    .kudatablecontainer {
+        flex-direction: column;
+    }
+    .imagecontainer{
+        margin-left: 30px;
+    }
+
+
+    /* APPSTORE, GOOGLE AND SIGNIN DIV   */
+    .appstorecontainer {
+        margin-left: 30px;
+    }
+
+    /* MEDIA LINKS AND ADDRESS  */
+    .contactandaddressDiv{
+        flex-direction: column;
+        gap: 2.5rem;
+        margin: 0 30px;
+    }
+    .address{
+        width: 25%;
+    }
+
+
+
+
 
 }
