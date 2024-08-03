@@ -1597,7 +1597,10 @@ footer {
     .imagecontainer{
         margin-left: 30px;
     }
-
+    .tablecontainer {
+        width: 100%;
+        overflow: hidden;
+    }
 
     /* APPSTORE, GOOGLE AND SIGNIN DIV   */
     .appstorecontainer {
