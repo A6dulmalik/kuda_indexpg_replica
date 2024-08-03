@@ -128,7 +128,6 @@ nav {
 .parentDiv {
     width: 80%;
     margin: auto;
-    border: 1px solid;
 }
 
 /* Intro/firstsection Styling */
@@ -967,9 +966,13 @@ footer {
 
 /* For mobile screens  */
 @media screen and (max-width: 767px) {
+    body{
+        width: 100%;
+        overflow-x: hidden;
+    }
     main {
         width: 100%;
-        /* overflow-x: hidden !important; */
+        overflow-x: hidden !important;
         
     }
 
@@ -1042,12 +1045,11 @@ footer {
 
     .parentDiv {
         width: 100%;
+        margin: auto;
         padding: 0px 0px;
     }
 
     .childDiv {
-        /* width: 100%; */
-        /* overflow-x: hidden; */
         flex-direction: column;
         justify-content: center;
         align-items: center;
@@ -1218,24 +1220,24 @@ footer {
 
     /* FIFTH DIV STYLING */
     .childDiv5 {
+        width: 100%;
         margin-top: 150px;
         gap: 5rem;
     }
 
     .leftDiv5 {
-        width: 100%;
+        width: 90%;
         text-align: center;
     }
 
     .leftDiv5 p {
+        width: 100%;
         line-height: 20px;
-        width: 95%;
-        /* margin: auto; */
 
     } 
     .rightDiv5 {
-        height: 25rem;
-        width: 25rem;
+        height: 23rem;
+        width: 23rem;
     
         img {
             width: 100%;
@@ -1252,7 +1254,11 @@ footer {
     }
 
     .rightDiv6 {
+        /* width: 90%; */
         text-align: center;
+    }
+    .rightDiv6 p{
+        width: 100%;
     }
 
     .leftDiv6 {
@@ -1273,8 +1279,11 @@ footer {
     }
 
     .rightDiv7 {
+        width: 90%;
         text-align: center;
-
+    }
+    .leftDiv7{
+        width: 20rem;
     }
 
 
@@ -1285,9 +1294,12 @@ footer {
         width: 100%;
         text-align: center;
     }
+    .leftDiv8{
+        width: 100%;
+    }
     .rightDiv8 {
-        width: 25rem;
-        height: 25rem;
+        width: 23rem;
+        height: 22rem;
     
     
         img {
@@ -1340,6 +1352,7 @@ footer {
     /* CHOOSE TABLE DIV */
     .chooseDiv table {
         width: 100%;
+        overflow-x: hidden;
     }
 
     /* MORE OF YOU DIV */
@@ -1456,7 +1469,11 @@ footer {
         width: 25%;
     }
 
-
+    
+/* FOOTNOTE  */
+.footnote{
+    width: 100%;
+}
 
 
 
