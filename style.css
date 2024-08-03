@@ -55,13 +55,6 @@ nav {
     position: relative;
 }
 
-.dropdowncontainer {
-    /* background: #a8a7a7;
-    width: 800px;
-    height: 100vh;
-    opacity: 0.5;
-    position: absolute; */
-}
 
 .dropdownlist {
     display: none;
@@ -73,7 +66,9 @@ nav {
     display: flex;
     flex-direction: column;
     gap: 32px;
-    background: white;
+    background: #c9c9c9;
+    border-radius: 5px;
+    /* background: white; */
     padding: 16px;
     position: absolute;
     top: 20px;
@@ -131,7 +126,9 @@ nav {
 
 /* Uniform styling (padding) for eight sections  */
 .parentDiv {
-    padding: 60px 100px;
+    width: 80%;
+    margin: auto;
+    border: 1px solid;
 }
 
 /* Intro/firstsection Styling */
@@ -154,7 +151,7 @@ nav {
 }
 
 .childDiv p {
-    font-size: 15px;
+    font-size: 14px;
     font-weight: 600;
     color: rgb(80, 79, 79);
     /* margin-bottom: 30px; */
@@ -247,6 +244,7 @@ nav {
 .topcards .card {
     display: flex;
     flex-direction: column;
+    gap: 2rem;
     width: 28%;
     padding: 20px;
     box-shadow: 3px 3px 10px rgb(213, 218, 224);
@@ -274,6 +272,7 @@ nav {
 .bottomcards .card {
     display: flex;
     flex-direction: column;
+    gap: 2rem;
     padding: 20px;
     box-shadow: 2px 2px 2px 1px rgb(213, 218, 224);
     border-radius: 5px;
@@ -298,6 +297,7 @@ nav {
 }
 
 .leftDiv3 h2 {
+    width: 63%;
     font-size: 30px;
     line-height: 44px;
 }
@@ -312,6 +312,13 @@ nav {
     text-decoration: underline;
     color: rgb(122, 15, 122);
     font-weight: 700;
+}
+.rightDiv3{
+    width: 35rem;
+    
+    img{
+        width: 100%;
+    }
 }
 
 .fa-angle-right {
@@ -402,7 +409,7 @@ nav {
 
 .leftDiv5 p {
     line-height: 30px;
-    width: 92%;
+    width: 87%;
     margin-bottom: 30px;
 }
 
@@ -415,10 +422,8 @@ nav {
 }
 
 .rightDiv5 {
-    height: 28rem;
-    width: 27.5rem;
-    /* border: 1px solid; */
-    /* box-shadow: ; */
+    height: 30rem;
+    width: 30rem;
 
     img {
         width: 100%;
@@ -434,10 +439,12 @@ nav {
 }
 
 .rightDiv6 {
-    width: 382px;
+    width: 40%;
 }
 
 .rightDiv6 p {
+    width: 85.5%;
+    line-height: 20px;
     margin-bottom: 30px !important;
 }
 
@@ -449,7 +456,8 @@ nav {
 }
 
 .leftDiv6 {
-    width: 28rem;
+    width: 30rem;
+    width: 30rem;
     /* border: 1px solid; */
 
     img {
@@ -465,7 +473,7 @@ nav {
 }
 
 .leftDiv7 {
-    width: 29rem;
+    width: 25rem;
     /* height: 28rem; */
 
     img {
@@ -476,11 +484,12 @@ nav {
 }
 
 .rightDiv7 {
-    width: 324px;
+    width: 400px;
     text-align: start;
 }
 
 .rightDiv7 p {
+    width: 90%;
     margin-bottom: 30px !important;
 }
 
@@ -497,13 +506,11 @@ nav {
     width: 100%;
     gap: 10rem;
     margin-top: 120px;
-
-
 }
 
 .rightDiv8 {
     width: 28rem;
-    /* height: 28rem;     */
+    height: 28rem;
 
 
     img {
@@ -513,11 +520,12 @@ nav {
 }
 
 .leftDiv8 {
-    width: 370px;
+    width: 400px;
 
 }
 
 .leftDiv8 p {
+    width: 90%;
     margin-bottom: 30px;
 }
 
@@ -713,10 +721,12 @@ tbody .data1 {
     font-weight: 900;
     color: var(--purple);
 }
+
 .box p,
-.box a{
+.box a {
     font-size: 14px;
 }
+
 .box a {
     color: purple;
     text-decoration: underline;
@@ -803,6 +813,7 @@ footer {
     justify-content: center;
     gap: 3rem;
     margin-top: 30px;
+    border: 1px solid;
 }
 
 .tablecontainer {
@@ -810,13 +821,16 @@ footer {
 }
 
 .tablecontainer table {
+    table-layout: fixed;
     border-collapse: collapse;
-    width: 100%;
+    /* width: 100%; */
 }
 
 .tablecontainer th,
 .tablecontainer td {
+
     border-bottom: none;
+    /* border: 1px solid; */
 }
 
 .imagecontainer {
@@ -947,253 +961,31 @@ footer {
 /* RESPONSIVENESS */
 
 /* Tablet screen/view */
-@media screen and (min-width: 768px) and (max-width: 1200px) {
 
-    body {
-        width: 100%;
-        /* font-size: 16px; */
-        /* Adjust font size for tablets */
-    }
-
-    nav {
-        position: relative;
-        height: 50px;
-        padding: 3px 20px;
-        box-shadow: none;
-    }
-
-    .navlinks {
-        flex-direction: column;
-        position: absolute;
-        top: 150px;
-        left: 20px;
-        width: 100%;
-        height: 120vh;
-        background: white;
-    }
-
-    .navlinks li {
-        padding: 20px 0;
-        border-bottom: 1px solid lightgray;
-
-    }
-
-    .fa-caret-down {
-        float: inline-end;
-    }
-
-    .signInDiv p {
-        position: absolute;
-        left: 23%;
-        top: 80px;
-        background: #DFE3FF;
-        padding: 12px 26px;
-        border-radius: 10px;
-        font-size: 14px;
-    }
-
-    .signInDiv button {
-        position: absolute;
-        left: 3%;
-        top: 80px;
-    }
-
-    .flagandbars {
-        position: absolute;
-        top: 20%;
-        right: 5%;
-    }
-
-    .flagandbars .fa-bars {
-        display: block;
-        font-size: 28px;
-    }
-
-    .fa-xmark-large {
-        font-size: 24px;
-    }
-
-    .navlinks,
-    .signInDiv button,
-    .signInDiv p {
-        display: none;
-        position: fixed;
-    }
-
-    .parentDiv {
-        padding: 100px 20px;
-    }
-
-    /* FIRST DIV STYLING */
-    .childDiv1 {
-        width: 100%;
-        align-items: center;
-        justify-content: space-between;
-    }
-
-    .leftDiv1 {
-        width: 45%;
-    }
-
-    .rightDiv1 {
-        width: 55%;
-        margin-top: 150px;
-
-        img {
-            width: 100%;
-        }
-    }
-
-    /* SECOND DIV STYLING */
-    .childDiv2 {
-        margin-top: 150px;
-        margin-bottom: 8rem;
-    }
-
-    .topcards,
-    .bottomcards {
-        font-size: 10px;
-        font-weight: 900;
-    }
-
-    .topcards .card {
-        width: 31%;
-    }
-
-    .bottomcards .card {
-        width: 48%;
-    }
-
-    /* THIRD DIV STYLING */
-    .childDiv3 {
-        gap: 5rem;
-        margin-bottom: 5rem;
-    }
-
-    .leftDiv3 {
-        width: 50%;
-        text-align: center;
-    }
-
-    .leftDiv3 h2 {
-        width: 60%;
-        margin: auto;
-    }
-
-
-    /* FOURTH DIV STYLING */
-    .childDiv4 {
-        flex-direction: column-reverse;
-        gap: 10rem;
-    }
-
-    .rightDiv4 {
-        text-align: center;
-        width: 400px;
-    }
-
-    .rightDiv4 p {
-        width: 90%;
-    }
-
-    /* FIFTH DIV STYLING */
-    .childDiv5 {
-        gap: 5rem;
-        margin-top: 150px;
-        text-align: center;
-    }
-
-    .leftDiv5 p {
-        width: 85%;
-        margin: auto;
-    }
-
-    /*  SIXTH DIV STYLING */
-    .childDiv6 {
-        gap: 5rem;
-        flex-direction: column-reverse;
-        text-align: center;
-    }
-
-    .rightDiv6 p {
-        margin-bottom: 20px !important;
-        width: 97%;
-    }
-
-
-    /* SEVENTH DIV STYLING */
-    .childDiv7 {
-        margin-top: 100px;
-        gap: 5rem;
-        text-align: center;
-    }
-
-    .rightDiv7 p {
-        width: 99%;
-    }
-
-    /* EIGHTH DIV STYLING */
-    .childDiv8 {
-        gap: 5rem;
-        flex-direction: column-reverse;
-        text-align: center;
-    }
-
-    /* LOGOS SECTION  */
-    .logosDiv img {
-        width: 80px;
-        /* height: 50px; */
-    }
-
-    /* CHOOSE TABLE DIV */
-    .chooseDiv table {
-        width: 95%;
-    }
-
-    /* MORE OF YOU DIV */
-    .box {
-        width: 30%;
-    }
-
-    .box h3 {
-        font-size: 22px;
-        font-weight: 900;
-        color: var(--purple);
-    }
-
-    .box p {
-        font-size: 14px;
-    }
-}
 
 
 
 /* For mobile screens  */
 @media screen and (max-width: 767px) {
-
-    body {
-
+    main {
         width: 100%;
-        overflow-x: hidden !important;
-    }
-    main{
-        width: 100%;
-        overflow-x: hidden !important;
-
+        /* overflow-x: hidden !important; */
+        
     }
 
     nav {
-        /* width: 100%; */
         position: relative;
-        height: 50px;
-        padding: 3px 20px;
+        /* height: 50px; */
+        /* padding: 3px 20px; */
+        box-shadow: 12px 10px 5px rgba(0, 0, 0, 0.1);
+
     }
 
     .navlinks {
         flex-direction: column;
         position: absolute;
         top: 150px;
-        left: 20px;
+        left: 5px;
         width: 100%;
         height: 100vh;
         background: white;
@@ -1254,8 +1046,8 @@ footer {
     }
 
     .childDiv {
-        width: 100%;
-        overflow-x: hidden;
+        /* width: 100%; */
+        /* overflow-x: hidden; */
         flex-direction: column;
         justify-content: center;
         align-items: center;
@@ -1431,13 +1223,24 @@ footer {
     }
 
     .leftDiv5 {
+        width: 100%;
         text-align: center;
     }
 
     .leftDiv5 p {
         line-height: 20px;
         width: 95%;
-        margin: auto;
+        /* margin: auto; */
+
+    } 
+    .rightDiv5 {
+        height: 25rem;
+        width: 25rem;
+    
+        img {
+            width: 100%;
+            height: 100%;
+        }
     }
 
 
@@ -1453,8 +1256,8 @@ footer {
     }
 
     .leftDiv6 {
-        /* width: 20%; */
-        margin-left: 20px;
+        width: 25rem;
+        height: 25rem;
 
         img {
             width: 100%;
@@ -1482,8 +1285,20 @@ footer {
         width: 100%;
         text-align: center;
     }
-
+    .rightDiv8 {
+        width: 25rem;
+        height: 25rem;
     
+    
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+    
+
+
+
     /* TESTIMONY DIV STYLING */
     .testimoniesDiv {
         margin-top: 100px;
@@ -1531,7 +1346,8 @@ footer {
     .boxes {
         flex-direction: column;
     }
-    .box{
+
+    .box {
         /* gap: 16px; */
         width: 90%;
 
@@ -1551,9 +1367,9 @@ footer {
         width: 100%;
         /* height: 300px; */
         flex-direction: column;
-        position: unset;
     }
-    .moneyappDiv .leftDiv{
+
+    .moneyappDiv .leftDiv {
         width: 100%;
     }
 
@@ -1592,15 +1408,37 @@ footer {
 
     /*  KUDA SECTIONS DIV */
     .kudatablecontainer {
+        width: 100%;
         flex-direction: column;
+        justify-content: start;
+        gap: 1rem;
+        margin: 0;
     }
-    .imagecontainer{
+
+    .imagecontainer {
         margin-left: 30px;
     }
-    .tablecontainer {
+
+    .tablecontainer table {
         width: 100%;
-        overflow: hidden;
+        /* width: 340px; */
+        /* overflow: hidden; */
+        /* border: 1px solid; */
     }
+
+    .tablecontainer tr th,
+    .tablecontainer tr td {
+        width: 50px;
+
+    }
+    .tablecontainer table th {
+        font-size: 12px;
+    }
+    
+    .tablecontainer table td {
+        font-size: 10px;
+    }
+    
 
     /* APPSTORE, GOOGLE AND SIGNIN DIV   */
     .appstorecontainer {
@@ -1608,12 +1446,13 @@ footer {
     }
 
     /* MEDIA LINKS AND ADDRESS  */
-    .contactandaddressDiv{
+    .contactandaddressDiv {
         flex-direction: column;
         gap: 2.5rem;
         margin: 0 30px;
     }
-    .address{
+
+    .address {
         width: 25%;
     }
 
